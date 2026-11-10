@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interfaz de inicio de sesión de demostración para una práctica universitaria.">
+  <title>Iniciar sesión | Nova</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="login-card" aria-labelledby="login-title">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M12 2.8 20 6v5.4c0 5.1-3.4 8.5-8 10.2-4.6-1.7-8-5.1-8-10.2V6l8-3.2Z"/>
+            <path d="m8.5 12.1 2.2 2.2 4.8-5"/>
+          </svg>
+        </div>
+        <span>NOVA<span class="brand-dot">.</span></span>
+      </div>
+
+      <div class="intro">
+        <p class="eyebrow">BIENVENIDO DE NUEVO</p>
+        <h1 id="login-title">Inicia sesión</h1>
+        <p class="subtitle">Ingresa tus datos para acceder a tu espacio.</p>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <div class="input-wrap">
+            <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m4 7 8 6 8-6"/>
+            </svg>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nombre@ejemplo.com"
+              autocomplete="email"
+              aria-describedby="emailError"
+              required
+            >
+          </div>
+          <small class="error-message" id="emailError" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <div class="input-wrap">
+            <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="10" width="16" height="11" rx="2"/>
+              <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>
+            </svg>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Ingresa tu contraseña"
+              autocomplete="current-password"
+              aria-describedby="passwordError"
+              required
+            >
+            <button class="toggle-password" id="togglePassword" type="button"
+              aria-label="Mostrar contraseña" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/>
+                <circle cx="12" cy="12" r="2.7"/>
+              </svg>
+            </button>
+          </div>
+          <small class="error-message" id="passwordError" aria-live="polite"></small>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-option" for="rememberEmail">
+            <input type="checkbox" id="rememberEmail" name="rememberEmail">
+            <span class="custom-checkbox" aria-hidden="true"></span>
+            <span>Recordar mi correo</span>
+          </label>
+          <a href="#" id="forgotLink">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button class="submit-button" type="submit">
+          <span>Iniciar sesión</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14m-6-6 6 6-6 6"/>
+          </svg>
+        </button>
+
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+
+      <div class="demo-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Entorno de demostración académica</span>
+      </div>
+    </section>
+
+    <aside class="visual-panel" aria-label="Información de seguridad">
+      <div class="visual-content">
+        <div class="visual-tag"><span></span> ACCESO SEGURO</div>
+        <h2>Tu espacio.<br><span>Tu progreso.</span></h2>
+        <p>Una experiencia sencilla para ingresar de forma rápida y mantener tu información organizada.</p>
+        <div class="visual-decoration" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="shield">
+            <svg viewBox="0 0 100 100">
+              <path d="M50 8 83 21v24c0 22-14 37-33 47C31 82 17 67 17 45V21L50 8Z"/>
+              <path d="m35 49 10 10 21-23"/>
+            </svg>
+          </div>
+          <span class="spark spark-one"></span>
+          <span class="spark spark-two"></span>
+          <span class="spark spark-three"></span>
+        </div>
+      </div>
+      <div class="visual-footer">
+        <span>PLATAFORMA NOVA</span>
+        <span>01 / 01</span>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
