@@ -131,3 +131,5 @@ forgotLink.addEventListener("click", (event) => {
   formStatus.className = "form-status";
   emailInput.focus();
 });
+
+// Validacion revisada por Carla
